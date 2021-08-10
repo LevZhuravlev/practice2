@@ -9,8 +9,6 @@ import UIKit
 
 class TableViewCellFirstType: UITableViewCell, DogeCellProtocol {
 
-    
-
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailLabel: UITextView!
@@ -36,7 +34,4 @@ class TableViewCellFirstType: UITableViewCell, DogeCellProtocol {
         super.setSelected(selected, animated: animated)
 
     }
-    
-
-    
 }

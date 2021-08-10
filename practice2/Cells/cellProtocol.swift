@@ -12,5 +12,3 @@ protocol DogeCellProtocol: AnyObject {
     var imageForDog: UIImageView! {get set}
     var activityIndicator: UIActivityIndicatorView! {get set}
 }
-
-

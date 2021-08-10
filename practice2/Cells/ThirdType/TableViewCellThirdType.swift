@@ -14,7 +14,6 @@ class TableViewCellThirdType: UITableViewCell {
     var images: [UIImageView] = []
     var labels: [UILabel] = []
     
-
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var titleLabel: UILabel!
     
@@ -47,9 +46,7 @@ extension TableViewCellThirdType: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-
-extension TableViewCellThirdType: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
+extension TableViewCellThirdType: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
     }
@@ -69,4 +66,3 @@ extension TableViewCellThirdType: UICollectionViewDelegate, UICollectionViewData
 //    
     
 }
-

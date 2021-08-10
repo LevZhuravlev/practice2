@@ -62,7 +62,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if dogList[indexPath.row].subclases.count < 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellSecondType") as! TableViewCellSecondType
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellSecondType") as? TableViewCellSecondType else {
+                return UITableViewCell()
+            }
             
             let dog = dogList[indexPath.row]
             cell.titleLabel.text = dog.name.capitalized
@@ -86,10 +88,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             }
             
             return cell
-
-            
-        } else if dogList[indexPath.row].subclases.count == 3{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellThirdType") as! TableViewCellThirdType
+        } else if dogList[indexPath.row].subclases.count == 3 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellThirdType") as? TableViewCellThirdType else {
+                return UITableViewCell()
+            }
             let dog = dogList[indexPath.row]
             cell.titleLabel.text = dogList[indexPath.row].name.capitalized + " third"
             mySerialQueue.async {
@@ -116,16 +118,18 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             }
             return cell
         } else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellFirstType") as? TableViewCellFirstType else {
+                return UITableViewCell()
+            }
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellFirstType") as! TableViewCellFirstType
-                
             let dog = dogList[indexPath.row]
             cell.titleLabel.text = dog.name.capitalized
             cell.detailLabel.text  = ""
             cell.imageForDog.backgroundColor = .gray
             cell.imageForDog?.image = nil
 
-            dog.subclases.forEach{cell.detailLabel.text = cell.detailLabel.text + $0 + "\n"}
+            dog.subclases.forEach {
+                cell.detailLabel.text += $0 + "\n"}
             
             mySerialQueue.async {
                 if dog.images.count > 0 {
@@ -150,6 +154,4 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return tableView.estimatedRowHeight
     }
-    
-
 }

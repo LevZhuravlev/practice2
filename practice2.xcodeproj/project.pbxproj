@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7BFA2CD454B27C42B5E5757D /* Pods_practice2_practice2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E5CF4F8B1A78BD6AB72E24 /* Pods_practice2_practice2UITests.framework */; };
-		98429856251F92F76C02D5F3 /* Pods_practice2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E191823E8DEE760D4F099E36 /* Pods_practice2.framework */; };
-		9A164C96925039FEFDBAEB95 /* Pods_practice2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6691B13B97B17FC4AA7551A5 /* Pods_practice2Tests.framework */; };
 		9F33B3FC26A0868B004DA60D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F33B3FB26A0868B004DA60D /* AppDelegate.swift */; };
 		9F33B3FE26A0868B004DA60D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F33B3FD26A0868B004DA60D /* SceneDelegate.swift */; };
 		9F33B40026A0868B004DA60D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F33B3FF26A0868B004DA60D /* ViewController.swift */; };
@@ -50,9 +47,7 @@
 
 /* Begin PBXFileReference section */
 		093A9FE164E4746CE953044F /* Pods-practice2-practice2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-practice2-practice2UITests.release.xcconfig"; path = "Target Support Files/Pods-practice2-practice2UITests/Pods-practice2-practice2UITests.release.xcconfig"; sourceTree = "<group>"; };
-		15E5CF4F8B1A78BD6AB72E24 /* Pods_practice2_practice2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_practice2_practice2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D88AE7B6F7699D597E8D501 /* Pods-practice2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-practice2.release.xcconfig"; path = "Target Support Files/Pods-practice2/Pods-practice2.release.xcconfig"; sourceTree = "<group>"; };
-		6691B13B97B17FC4AA7551A5 /* Pods_practice2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_practice2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90AF0B28EFF479814C504AB7 /* Pods-practice2-practice2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-practice2-practice2UITests.debug.xcconfig"; path = "Target Support Files/Pods-practice2-practice2UITests/Pods-practice2-practice2UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9F33B3F826A0868B004DA60D /* practice2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = practice2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F33B3FB26A0868B004DA60D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,7 +76,6 @@
 		9F9EFC3226B3203D0072E402 /* cellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellProtocol.swift; sourceTree = "<group>"; };
 		CBE25F71382A66716F715274 /* Pods-practice2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-practice2Tests.debug.xcconfig"; path = "Target Support Files/Pods-practice2Tests/Pods-practice2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DEEF10350F06CADD23AEE8BF /* Pods-practice2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-practice2Tests.release.xcconfig"; path = "Target Support Files/Pods-practice2Tests/Pods-practice2Tests.release.xcconfig"; sourceTree = "<group>"; };
-		E191823E8DEE760D4F099E36 /* Pods_practice2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_practice2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6FE7BD73B83B66632358FFD /* Pods-practice2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-practice2.debug.xcconfig"; path = "Target Support Files/Pods-practice2/Pods-practice2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,7 +84,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98429856251F92F76C02D5F3 /* Pods_practice2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +91,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A164C96925039FEFDBAEB95 /* Pods_practice2Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,23 +98,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BFA2CD454B27C42B5E5757D /* Pods_practice2_practice2UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03BC25A7478E202128A4A18E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E191823E8DEE760D4F099E36 /* Pods_practice2.framework */,
-				15E5CF4F8B1A78BD6AB72E24 /* Pods_practice2_practice2UITests.framework */,
-				6691B13B97B17FC4AA7551A5 /* Pods_practice2Tests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		9F33B3EF26A0868B004DA60D = {
 			isa = PBXGroup;
 			children = (
@@ -131,7 +112,6 @@
 				9F33B41C26A0868F004DA60D /* practice2UITests */,
 				9F33B3F926A0868B004DA60D /* Products */,
 				F83F5888FBE0E3C7FBEF9FFE /* Pods */,
-				03BC25A7478E202128A4A18E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

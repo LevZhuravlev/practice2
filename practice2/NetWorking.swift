@@ -36,8 +36,8 @@ class NetWorkService {
             }
                     
             let decoder = JSONDecoder()
-            let DogStruct = try? decoder.decode(NetWorkData.self, from: data!)
-            completionHandler(DogStruct?.generateDogTypes())
+            let dogStruct = try? decoder.decode(NetWorkData.self, from: data!)
+            completionHandler(dogStruct?.generateDogTypes())
         }
         
         task.resume()
@@ -49,19 +49,18 @@ class NetWorkService {
             return
         }
                     
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        URLSession.shared.dataTask(with: url) { data, _, _ in
             guard let data = data else { return }
             let decoder = JSONDecoder()
-            let DogImageStruct = try? decoder.decode(ImageData.self, from: data)
+            let dogImageStruct = try? decoder.decode(ImageData.self, from: data)
             
-            guard let imageUrl = URL(string: DogImageStruct?.message ?? "") else {return}
+            guard let imageUrl = URL(string: dogImageStruct?.message ?? "") else {return}
             completionHandler(imageUrl)
         }.resume()
     }
     
     static func getImageByURL(url: URL, completionHandler: @escaping (UIImage) -> ()) {
-        URLSession.shared.dataTask(with: url) {
-            data, response, error in
+        URLSession.shared.dataTask(with: url) { data, _, _ in
             if let data = data, let image = UIImage(data: data) {
                 completionHandler(image)
             }
@@ -78,7 +77,5 @@ class NetWorkService {
                 completionHandler(image)
             }
         }
-        
     }
 }
-

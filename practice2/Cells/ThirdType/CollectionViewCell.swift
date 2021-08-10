@@ -18,8 +18,7 @@ class CollectionViewCell: UICollectionViewCell {
         activityIndicator.startAnimating()
         activityIndicator.hidesWhenStopped = true
     }
-    
-     
+         
     static func nib() -> UINib {
         return UINib(nibName: "CollectionViewCell", bundle: nil)
     }
