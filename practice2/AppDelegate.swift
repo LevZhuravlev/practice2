@@ -4,7 +4,7 @@
 //
 //  Created by Lev Zhuravlev on 15.07.2021.
 //
-
+  
 import UIKit
 
 @main

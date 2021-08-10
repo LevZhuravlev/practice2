@@ -8,9 +8,15 @@
 import UIKit
 
 class TableViewCellThirdType: UITableViewCell {
-
+    
+    var imageForDog: UIImageView!
+    var activityIndicators: [UIActivityIndicatorView] = []
+    var images: [UIImageView] = []
+    var labels: [UILabel] = []
+    
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -50,7 +56,10 @@ extension TableViewCellThirdType: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as? CollectionViewCell
-                
+        images.append(cell!.imageViewForDog)
+        labels.append(cell!.label)
+        activityIndicators.append(cell!.activityIndicator)
+        
         return cell!
     }
     
@@ -60,3 +69,4 @@ extension TableViewCellThirdType: UICollectionViewDelegate, UICollectionViewData
 //    
     
 }
+

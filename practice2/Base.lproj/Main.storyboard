@@ -16,26 +16,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pC2-Jk-qxp">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="vzO-uR-5SM"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="G06-7v-1ll"/>
-                                </connections>
-                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="H1f-NZ-txt">
+                                <rect key="frame" x="182" y="423" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="XVO-Zr-jp1"/>
+                                    <constraint firstAttribute="width" constant="50" id="j3R-VP-Ki5"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pC2-Jk-qxp" secondAttribute="trailing" id="NDj-C7-yVY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pC2-Jk-qxp" secondAttribute="bottom" id="V0w-uM-Tqx"/>
-                            <constraint firstItem="pC2-Jk-qxp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bkZ-VE-v7b"/>
-                            <constraint firstItem="pC2-Jk-qxp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qen-XG-vtt"/>
+                            <constraint firstItem="H1f-NZ-txt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5ld-qN-OHk"/>
+                            <constraint firstItem="H1f-NZ-txt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="P0P-oL-Ifx"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="pC2-Jk-qxp" id="uLO-U4-nbM"/>
+                        <outlet property="activityIndicator" destination="H1f-NZ-txt" id="vEl-k7-6Jv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

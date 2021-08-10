@@ -8,9 +8,15 @@
 import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var label: UILabel!    
+    @IBOutlet weak var imageViewForDog: UIImageView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        label.text = ""
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
     }
     
      

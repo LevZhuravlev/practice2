@@ -9,10 +9,10 @@ import UIKit
 
 class NetWorkService {
     
-    var errorClientHandler: ((Error) -> ())?
-    var errorServerHandler: ((URLResponse) -> ())?
+    var errorClientHandler: ((Error) -> Void)?
+    var errorServerHandler: ((URLResponse) -> Void)?
 
-    func getDoges() {
+    func getDoges(completionHandler: @escaping ([DogType]?)->()) {
         let urlString = URL(string: "https://dog.ceo/api/breeds/list/all")
         guard let url = urlString else {
             return
@@ -34,15 +34,51 @@ class NetWorkService {
                 }
                 return
             }
-            
+                    
             let decoder = JSONDecoder()
-            let DogStruct = try? decoder.decode(DogModel.self, from: data!)
-            print(DogStruct?.generateDogTypes() ?? "")
-
+            let DogStruct = try? decoder.decode(NetWorkData.self, from: data!)
+            completionHandler(DogStruct?.generateDogTypes())
         }
         
-        
         task.resume()
+    }
+    
+    static func getImageURLFor(dogClass: DogType, completionHandler: @escaping (URL) -> ()) {
+        
+        guard let url = URL(string: "https://dog.ceo/api/breed/\(dogClass.name)/images/random") else {
+            return
+        }
+                    
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data else { return }
+            let decoder = JSONDecoder()
+            let DogImageStruct = try? decoder.decode(ImageData.self, from: data)
+            
+            guard let imageUrl = URL(string: DogImageStruct?.message ?? "") else {return}
+            completionHandler(imageUrl)
+        }.resume()
+    }
+    
+    static func getImageByURL(url: URL, completionHandler: @escaping (UIImage) -> ()) {
+        URLSession.shared.dataTask(with: url) {
+            data, response, error in
+            if let data = data, let image = UIImage(data: data) {
+                completionHandler(image)
+            }
+        }.resume()
+    }
+    
+    static var lock = NSLock()
+    
+    static func getImage(for dog: DogType, completionHandler: @escaping (UIImage)->()) {
+        lock.lock()
+        NetWorkService.getImageURLFor(dogClass: dog) { url in
+            NetWorkService.getImageByURL(url: url) { image in
+                self.lock.unlock()
+                completionHandler(image)
+            }
+        }
+        
     }
 }
 
