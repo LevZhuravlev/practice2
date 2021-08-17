@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CollectionViewCell" customModule="practice2" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="gTV-IL-0wX" customClass="CollectionViewCell" customModule="practice2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="156" height="146"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="156" height="146"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2lS-Mm-5QB">
+                        <rect key="frame" x="0.0" y="0.0" width="156" height="146"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XCB-oB-Dhe">
+                                <rect key="frame" x="0.0" y="0.0" width="156" height="146"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="oK4-Ts-OtA">
+                                <rect key="frame" x="68" y="63" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oK4-Ts-OtA" firstAttribute="centerX" secondItem="2lS-Mm-5QB" secondAttribute="centerX" id="2L0-i1-S0i"/>
+                            <constraint firstAttribute="bottom" secondItem="XCB-oB-Dhe" secondAttribute="bottom" id="6WG-P4-Udp"/>
+                            <constraint firstItem="XCB-oB-Dhe" firstAttribute="leading" secondItem="2lS-Mm-5QB" secondAttribute="leading" id="Jup-W8-myP"/>
+                            <constraint firstItem="XCB-oB-Dhe" firstAttribute="top" secondItem="2lS-Mm-5QB" secondAttribute="top" id="MY4-1O-RDU"/>
+                            <constraint firstAttribute="trailing" secondItem="XCB-oB-Dhe" secondAttribute="trailing" id="NjS-PC-ORD"/>
+                            <constraint firstItem="oK4-Ts-OtA" firstAttribute="centerY" secondItem="2lS-Mm-5QB" secondAttribute="centerY" id="eAX-Ty-ure"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YW5-Cr-9NC">
+                        <rect key="frame" x="8" y="117.5" width="140" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="YW5-Cr-9NC" secondAttribute="trailing" constant="8" id="1jk-3Q-iVC"/>
+                <constraint firstItem="2lS-Mm-5QB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9ba-vp-ovP"/>
+                <constraint firstAttribute="bottom" secondItem="2lS-Mm-5QB" secondAttribute="bottom" id="B3z-jc-1eL"/>
+                <constraint firstItem="YW5-Cr-9NC" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="I6x-kZ-IGU"/>
+                <constraint firstItem="YW5-Cr-9NC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="OCw-vr-gaj"/>
+                <constraint firstItem="2lS-Mm-5QB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Tyf-rs-wDv"/>
+                <constraint firstAttribute="bottom" secondItem="YW5-Cr-9NC" secondAttribute="bottom" constant="8" id="mjT-0o-K0h"/>
+                <constraint firstItem="YW5-Cr-9NC" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="nsW-7k-hPX"/>
+                <constraint firstAttribute="trailing" secondItem="2lS-Mm-5QB" secondAttribute="trailing" id="uo3-Qx-iNI"/>
+            </constraints>
+            <size key="customSize" width="156" height="146"/>
+            <connections>
+                <outlet property="activityIndicator" destination="oK4-Ts-OtA" id="BS9-rC-B9a"/>
+                <outlet property="imageViewForDog" destination="XCB-oB-Dhe" id="iTJ-vg-kCV"/>
+                <outlet property="label" destination="YW5-Cr-9NC" id="o3d-Cc-aJ1"/>
+            </connections>
+            <point key="canvasLocation" x="150.72463768115944" y="113.83928571428571"/>
+        </collectionViewCell>
+    </objects>
+</document>
